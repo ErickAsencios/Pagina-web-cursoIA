@@ -56,12 +56,46 @@ body {
     background-image: url("./images/fusion4.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  @media (max-width: 768px){
+    #carousel .carousel-inner{
+      background-size: contain;
+      align-items: center;
+      text-align: center;
+      background-position: center;
+    }
+  }
+  @media (max-width: 480px){
+    #carousel .carousel-inner{
+      background-size: contain;
+      background-position: center;
+    }
   }
 
   .carousel-caption {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+#carousel{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.carousel-caption h3{
+  background-position: center;
+  text-align: center;
 }
 
 .carousel-item:nth-child(1) .carousel-caption h3 {
@@ -133,6 +167,61 @@ body {
     }
 }
 
+
+/* Ajustes para pantallas grandes */
+@media (max-width: 750px) {
+  .carousel-item:nth-child(1) .carousel-caption h3 {
+      font-size: 1rem;
+      width: 47ch;
+      animation: escritura1 3s steps(47) forwards;
+      white-space: normal; /* Permite el salto de línea */
+      word-wrap: break-word; 
+     
+  }
+
+  .carousel-item:nth-child(2) .carousel-caption h3 {
+      font-size: 1rem;
+      width: 54ch;
+      animation: escritura2 3s steps(47) forwards;
+      white-space: normal; /* Permite el salto de línea */
+      word-wrap: break-word; 
+   
+  }
+
+  .carousel-item:nth-child(3) .carousel-caption h3 {
+      font-size: 1rem;
+      width: 32ch;
+      animation: escritura3 3s steps(29) forwards;
+      white-space: normal; /* Permite el salto de línea */
+      word-wrap: break-word; 
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item:nth-child(1) .carousel-caption h3 {
+      font-size: 0.8rem;
+      width: 47ch;
+      animation: escritura1 3s steps(47) forwards;
+      white-space: normal; /* Permite el salto de línea */
+      word-wrap: break-word; 
+  }
+
+  .carousel-item:nth-child(2) .carousel-caption h3 {
+      font-size: 0.8rem;
+      width: 54ch;
+      animation: escritura2 3s steps(47) forwards;
+      white-space: normal; /* Permite el salto de línea */
+      word-wrap: break-word; 
+  }
+
+  .carousel-item:nth-child(3) .carousel-caption h3 {
+      font-size: 0.8rem;
+      width: 32ch;
+      animation: escritura3 3s steps(29) forwards;
+      white-space: normal; /* Permite el salto de línea */
+      word-wrap: break-word; 
+  }
+}
 
   #carousel .carousel-item{
     height: 360px;
@@ -271,3 +360,7 @@ body {
     color: rgb(240, 231, 231);
   }
   
+  #boton{
+    background-color: #000;
+    color: #000;
+  }
